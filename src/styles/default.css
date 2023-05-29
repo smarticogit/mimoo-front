@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+    --cor-one: white;
+    --cor-two: black;
+    --cor-three: rgb(125, 93, 192);
+    --cor-four: rgb(22, 216, 179);
+    --cor-five: rgb(81, 46, 122);
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

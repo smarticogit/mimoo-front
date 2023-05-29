@@ -1,0 +1,74 @@
+body {
+    background-image: linear-gradient(to left bottom, rgba(22, 216, 180, 0.315), var(--cor-one));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    background-color: var(--cor-four);
+    width: 400px;
+    height: 70vh;
+    border-radius: 20px;
+    gap: 20px;
+    box-shadow: 4px 4px 8px 2px rgba(22, 22, 22, 0.179);
+}
+
+main img {
+    width: 120px;
+}
+
+main form {
+    gap: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--cor-one);
+    border-radius: 10px;
+    width: 80%;
+    height: 70%;
+}
+
+main form input {
+    font-size: 15px;
+    width: 90%;
+    height: 50px;
+    padding: 10px 25px;
+    border: 0;
+    border-radius: 10px;
+    color: rgb(109, 105, 105);
+}
+
+main form input:focus {
+    font-size: 15px;
+    color: var(--cor-five);
+    outline: 2px solid var(--cor-five);
+}
+
+
+main form p {
+    font-size: 30px;
+    color: var(--cor-five);
+}
+
+main a {
+    color: var(--cor-five);
+}
+
+main form button {
+    all: unset;
+    padding: 5px;
+    background-color: var(--cor-one);
+    border-radius: 8px;
+    width: 120px;
+    height: 25px;
+    text-align: center;
+    color: var(--cor-five);
+}
+
+main form button:active {
+    color: var(--cor-four);
+    outline: 2px solid var(--cor-five);
+}
