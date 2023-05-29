@@ -32,6 +32,10 @@ form.addEventListener('submit', async (event) => {
         localStorage.setItem("token", data.AccessToken)
 
         showToast('Login Successfull'), 'success';
+
+        email.value = "";
+        password.value = "";
+
         setTimeout(() => {
             window.location.href = "/src/pages/home.html";
         }, 1500);
