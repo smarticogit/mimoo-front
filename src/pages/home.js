@@ -6,17 +6,11 @@ const deleteElement = document.querySelector('.delete');
 const update = document.querySelector('.update');
 const box = document.querySelector('.box');
 
-
-
 list.addEventListener('click', async () => {
-
-    loadingElement.style.display = "flex";
 
     try {
         const response = await fetch("https://qfdzv16do0.execute-api.us-east-1.amazonaws.com/tools");
         const data = await response.json();
-
-        loadingElement.style.display = "none";
 
         box.innerHTML = '';
 
@@ -25,10 +19,8 @@ list.addEventListener('click', async () => {
             const card = document.createElement('div');
             card.classList.add('card');
 
-
             const cardTitle = document.createElement('p');
             cardTitle.classList.add('card-title');
-
 
             const cardDescription = document.createElement('p');
             cardDescription.classList.add('card-description');

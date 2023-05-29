@@ -55,6 +55,7 @@ main form p {
 }
 
 main a {
+    all: unset;
     color: var(--cor-five);
 }
 

@@ -48,13 +48,13 @@ main form input:focus {
     outline: 2px solid var(--cor-five);
 }
 
-
 main form p {
     font-size: 30px;
     color: var(--cor-five);
 }
 
 main a {
+    all: unset;
     color: var(--cor-five);
 }
 
