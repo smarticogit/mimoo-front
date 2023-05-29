@@ -2,6 +2,7 @@ const form = document.querySelector('form');
 let email = document.querySelector('.email');
 let password = document.querySelector('.password');
 import showToast from '../service/toast.js';
+const isLocal = window.location.hostname === 'localhost';
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -31,7 +32,7 @@ form.addEventListener('submit', async (event) => {
         showToast('Register Successfull', 'success');
 
         setTimeout(() => {
-            window.location.href = "../../index.html";
+            window.location.href = isLocal ? "../../index.html" : "https://smarticogit.github.io/index.html"
         }, 1500);
 
     } catch (error) {

@@ -5,8 +5,7 @@ const getTag = document.querySelector('.get-tag');
 const deleteElement = document.querySelector('.delete');
 const update = document.querySelector('.update');
 const box = document.querySelector('.box');
-const loadingElement = document.querySelector(".box-loading");
-let dots = "";
+
 
 
 list.addEventListener('click', async () => {
@@ -60,19 +59,10 @@ list.addEventListener('click', async () => {
         })
 
     } catch (error) {
-        // Trate qualquer erro que possa ocorrer durante a solicitação
         console.error(error);
     }
 });
 
-setInterval(updateLoadingText, 400);
 
-function updateLoadingText() {
-    loadingElement.textContent = `Loading${dots}`;
-    dots += ".";
-    if (dots.length > 5) {
-        dots = "";
-    }
-}
 
 
