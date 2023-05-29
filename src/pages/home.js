@@ -59,12 +59,13 @@ list.addEventListener('click', async () => {
             box.append(card);
         })
 
-        console.log(data);
     } catch (error) {
         // Trate qualquer erro que possa ocorrer durante a solicitação
         console.error(error);
     }
 });
+
+setInterval(updateLoadingText, 400);
 
 function updateLoadingText() {
     loadingElement.textContent = `Loading${dots}`;
@@ -74,4 +75,4 @@ function updateLoadingText() {
     }
 }
 
-setInterval(updateLoadingText, 400);
+

@@ -2,7 +2,9 @@ const showToast = (message, type) => {
     const toast = document.querySelector(".toast");
     const toastMessage = document.querySelector(".message");
 
-    console.log(`type ${type}, message ${message}`);
+    if (!message || !type) {
+        return console.log("Verify data to toast!");
+    }
 
     toast.style.backgroundColor = type === 'error' ? 'var(--error)' : 'var(--success)';
 

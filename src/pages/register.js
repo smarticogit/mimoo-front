@@ -1,7 +1,7 @@
 const form = document.querySelector('form');
 let email = document.querySelector('.email');
 let password = document.querySelector('.password');
-import showToast from './src/service/toast.js';
+import showToast from '../service/toast.js';
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -16,7 +16,7 @@ form.addEventListener('submit', async (event) => {
     }
 
     try {
-        const response = await fetch('https://qfdzv16do0.execute-api.us-east-1.amazonaws.com/login', {
+        const response = await fetch('https://qfdzv16do0.execute-api.us-east-1.amazonaws.com/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -28,23 +28,15 @@ form.addEventListener('submit', async (event) => {
             return showToast('check login and password', 'error');
         }
 
-        const data = await response.json();
-        localStorage.setItem("token", data.AccessToken)
+        showToast('Register Successfull', 'success');
 
-        showToast('Login Successfull'), 'success';
         setTimeout(() => {
-            window.location.href = "/src/pages/home.html";
+            window.location.href = "../../index.html";
         }, 1500);
 
     } catch (error) {
         console.log(error.message);
-        showToast('Error server'), 'error';
+        showToast('Error server', 'error');
     }
 });
-
-
-
-
-
-
 
