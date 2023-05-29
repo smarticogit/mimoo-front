@@ -9,22 +9,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles//home.css">
     <link rel="stylesheet" href="../styles/default.css">
-    <script src="./home.js" defer></script>
+    <script src="./home.js" type="module" defer></script>
     <title>.: Mimoo Tools :.</title>
 </head>
 
 <body>
+    <div class="box-loading">
+        <div class="loading"></div>
+    </div>
     <main class="flex-column-center">
-        <img src="https://mimoo.dev/wp-content/uploads/2022/02/Frame.svg" alt="logo">
-        <div class="menu">
-            <i class="material-icons">add</i>
-            <p>List</p>
-            <div class="icon"></div>
-            <p>List</p>
-            <div class="icon"></div>
-            <p>List</p>
+        <h2>Home Page</h2>
+        <div class="page flex-center-start">
+            <menu class="flex-column">
+                <img src="../assets/icon-menu.png" class="icon-menu" alt="icon-menu">
+                <a class="list">List</a>
+                <a class="create">Create</a>
+                <a class="get">Get</a>
+                <a class="get-tag">GetTag</a>
+                <a class="delete">Delete</a>
+                <a class="update">Update</a>
+            </menu>
+            <div class="content">
+                <div class="box"></div>
+            </div>
         </div>
     </main>
 </body>

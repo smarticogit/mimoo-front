@@ -11,6 +11,19 @@
     --cor-three: rgb(125, 93, 192);
     --cor-four: rgb(22, 216, 179);
     --cor-five: rgb(81, 46, 122);
+    --success: rgb(22, 216, 179);
+    --error: rgb(81, 46, 122);
+}
+
+body {
+    position: relative;
+    background-image: linear-gradient(to left bottom, rgba(22, 216, 180, 0.315), var(--cor-one));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .flex {
@@ -25,8 +38,39 @@
     align-items: center;
 }
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.flex-center-start {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+body .toast {
+    position: absolute;
+    color: #fff;
+    top: 30px;
+    width: 30%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--erro);
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.toast.show {
+    opacity: 1;
 }

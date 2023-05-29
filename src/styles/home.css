@@ -1,0 +1,138 @@
+body {
+    position: relative;
+    background-image: linear-gradient(to top right, rgba(22, 216, 180, 0.315), var(--cor-one));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(188, 8, 8);
+}
+
+.page {
+    width: 100%;
+    gap: 30px;
+}
+
+main {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    height: 90vh;
+    border-radius: 20px;
+    gap: 20px;
+    box-shadow: 4px 4px 8px 2px rgba(22, 22, 22, 0.179);
+}
+
+main img {
+    width: 120px;
+}
+
+main menu {
+    padding: 30px 0;
+    background-color: rgb(207, 159, 232);
+    width: 10%;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.icon-menu {
+    width: 40px;
+}
+
+main menu a {
+    margin-top: 20px;
+    color: var(--cor-five);
+
+}
+
+main .content {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 50px;
+    padding: 15px;
+    gap: 30px;
+    background-color: rgba(81, 187, 118, 0.344);
+    width: 80%;
+    height: 70vh;
+    border-radius: 10px;
+}
+
+main .box {
+    display: flex;
+    justify-content: flex-start;
+    align-self: start;
+    gap: 20px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    overflow: auto;
+    max-height: 100%; 
+}
+
+.card {
+    padding: 5px;
+    font-size: 10px;
+    width: 270px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 15px;
+    color: var(--cor-three);
+    text-align: center;
+}
+
+.card-description {
+    font-size: 10px;
+    color: var(--cor-two);
+    font-weight: 200;
+    font-style: oblique;
+}
+
+.card-link {
+    text-decoration: none;
+    color: var(--cor-three);
+}
+
+.box-tags {
+    margin-top: 20px;
+    gap: 5px;
+    display: flex;
+    justify-content: flex-start;
+    overflow-wrap: break-word;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--cor-three);
+    color: var(--cor-one);
+    font-size: 9px;
+}
+
+.hidden {
+    display: none;
+}
+
+.box-loading {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background-color: rgba(92, 19, 182, 0.38);
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    border-radius: 10px;
+    color: rgb(240, 244, 242);
+}
+

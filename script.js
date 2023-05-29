@@ -1,6 +1,7 @@
 const form = document.querySelector('form');
 let email = document.querySelector('.email');
 let password = document.querySelector('.password');
+import showToast from './src/service/toast.js';
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -20,15 +21,20 @@ form.addEventListener('submit', async (event) => {
         });
 
         if (response.status !== 200) {
-            return console.log('Login error');
+            return showToast('check login and password', 'error');
         }
 
-        window.location.href = "/src/pages/home.html"
         const data = await response.json();
         localStorage.setItem("token", data.AccessToken)
 
+        showToast('Login Successfull'), 'success';
+        setTimeout(() => {
+            window.location.href = "/src/pages/home.html";
+        }, 1500);
+
     } catch (error) {
         console.log(error.message);
+        showToast('Error server'), 'error';
     }
 });
 
