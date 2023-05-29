@@ -38,7 +38,8 @@ form.addEventListener('submit', async (event) => {
         password.value = "";
 
         setTimeout(() => {
-            window.location.href = isLocal ? "/src/pages/home.html" : "https://smarticogit.github.io/"
+            // window.location.href = isLocal ? "./src/pages/home.html" : "https://smarticogit.github.io/mimoo-front/src/pages/home.html"
+            window.location.href = "./src/pages/home.html";
         }, 1500);
 
     } catch (error) {

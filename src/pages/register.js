@@ -32,7 +32,7 @@ form.addEventListener('submit', async (event) => {
         showToast('Register Successfull', 'success');
 
         setTimeout(() => {
-            window.location.href = isLocal ? "../../index.html" : "https://smarticogit.github.io/index.html"
+            window.location.href = isLocal ? "../../index.html" : "https://smarticogit.github.io/mimoo-front/"
         }, 1500);
 
     } catch (error) {
