@@ -1,18 +1,17 @@
-const list = document.querySelector('.list');
-const create = document.querySelector('.create');
-const get = document.querySelector('.get');
-const getTag = document.querySelector('.get-tag');
-const deleteElement = document.querySelector('.delete');
-const update = document.querySelector('.update');
 const box = document.querySelector('.box');
 
-list.addEventListener('click', async () => {
-
+export const serviceList = async () => {
     try {
+        box.innerHTML = '';
+
         const response = await fetch("https://qfdzv16do0.execute-api.us-east-1.amazonaws.com/tools");
         const data = await response.json();
 
-        box.innerHTML = '';
+        box.classList.add('flex-start-start');
+        box.classList.remove('flex-column-center');
+
+        const pageTitle = document.createElement('h2');
+        pageTitle.textContent = 'List Tools';
 
         data.map(tool => {
 
@@ -45,7 +44,6 @@ list.addEventListener('click', async () => {
             cardDescription.textContent = tool.description;
             cardTitle.textContent = tool.title;
 
-
             card.append(cardTitle, cardDescription, cardLink, boxTags)
             box.append(card);
         })
@@ -53,8 +51,4 @@ list.addEventListener('click', async () => {
     } catch (error) {
         console.error(error);
     }
-});
-
-
-
-
+}

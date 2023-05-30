@@ -12,4 +12,5 @@ const showToast = (message, type) => {
         toast.classList.remove("show");
     }, 2000);
 }
+
 export default showToast;

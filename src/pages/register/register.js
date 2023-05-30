@@ -1,7 +1,7 @@
 const form = document.querySelector('form');
 let email = document.querySelector('.email');
 let password = document.querySelector('.password');
-import showToast from '../service/toast.js';
+import showToast from '../../service/toast.js';
 const isLocal = window.location.hostname === '127.0.0.1';
 
 form.addEventListener('submit', async (event) => {

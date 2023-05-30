@@ -40,7 +40,7 @@
     align-items: center;
 }
 
-.flex-center {
+.flex-center-center {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,6 +51,13 @@
     justify-content: center;
     align-items: flex-start;
 }
+
+.flex-start-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 
 body .toast {
     position: absolute;

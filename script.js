@@ -2,7 +2,7 @@ const form = document.querySelector('form');
 let email = document.querySelector('.email');
 let password = document.querySelector('.password');
 import showToast from './src/service/toast.js';
-const isLocal = window.location.hostname === 'localhost';
+const isLocal = window.location.hostname === '127.0.0.1';
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -38,7 +38,7 @@ form.addEventListener('submit', async (event) => {
         password.value = "";
 
         setTimeout(() => {
-            window.location.href = isLocal ? "./src/pages/home.html" : "https://smarticogit.github.io/mimoo-front/src/pages/home.html"
+            window.location.href = isLocal ? "./src/pages/home/home.html" : "https://smarticogit.github.io/mimoo-front/src/pages/home/home.html"
         }, 1500);
 
     } catch (error) {

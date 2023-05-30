@@ -11,8 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles//home.css">
-    <link rel="stylesheet" href="../styles/default.css">
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="../../../default.css">
+    <link rel="stylesheet" href="./create.css">
     <script src="./home.js" type="module" defer></script>
     <title>.: Mimoo Tools :.</title>
 </head>
@@ -21,20 +22,19 @@
     <div class="box-loading">
         <div class="loading"></div>
     </div>
+    <div class="toast">
+        <div class="message"></div>
+    </div>
     <main class="flex-column-start">
         <h2>Home Page</h2>
         <div class="page flex-center-start">
             <menu class="flex-column">
-                <img src="../assets/icon-menu.png" class="icon-menu" alt="icon-menu">
+                <img src="../../assets/icon-menu.png" class="icon-menu" alt="icon-menu">
                 <a class="list">List</a>
                 <a class="create">Create</a>
-                <a class="get">Get</a>
-                <a class="get-tag">GetTag</a>
-                <a class="delete">Delete</a>
-                <a class="update">Update</a>
             </menu>
             <div class="content">
-                <div class="box"></div>
+                <div class="box flex-column-start-start"></div>
             </div>
         </div>
     </main>
