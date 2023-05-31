@@ -21,7 +21,7 @@ form.addEventListener('submit', async (event) => {
     loading('on');
 
     try {
-        const response = await fetch('https://qfdzv16do0.execute-api.us-east-1.amazonaws.com/login', {
+        const response = await fetch('https://m4y6rb6e09.execute-api.us-east-1.amazonaws.com/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -7,7 +7,7 @@ export const serviceList = async () => {
         box.innerHTML = '';
 
         loading('on');
-        const response = await fetch("https://qfdzv16do0.execute-api.us-east-1.amazonaws.com/tools");
+        const response = await fetch("https://m4y6rb6e09.execute-api.us-east-1.amazonaws.com/tools");
         const data = await response.json();
         loading('off');
 
