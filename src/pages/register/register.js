@@ -1,6 +1,7 @@
 const form = document.querySelector('form');
 let email = document.querySelector('.email');
 let password = document.querySelector('.password');
+let name = document.querySelector('.name');
 import { loading } from '../../service/loading.js';
 import showToast from '../../service/toast.js';
 const isLocal = window.location.hostname === '127.0.0.1';
@@ -9,11 +10,12 @@ form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const loginData = {
+        name: name.value,
         email: email.value,
         password: password.value
     };
 
-    if (!email.value || !password.value) {
+    if (!email.value || !password.value || !name) {
         return showToast('Empty Fields', 'error');
     }
 
@@ -37,7 +39,7 @@ form.addEventListener('submit', async (event) => {
         showToast('Register Successfull', 'success');
 
         setTimeout(() => {
-            window.location.href = isLocal ? "../../index.html" : "https://smarticogit.github.io/mimoo-front/"
+            window.location.href = isLocal ? "../../../index.html" : "https://smarticogit.github.io/mimoo-front/"
         }, 1500);
 
     } catch (error) {
@@ -49,5 +51,11 @@ form.addEventListener('submit', async (event) => {
 const clear = () => {
     email.value = "";
     password.value = "";
+    name.value = "";
 }
+
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    showToast('Oppps!', 'error');
+});
 

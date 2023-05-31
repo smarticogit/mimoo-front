@@ -3,7 +3,6 @@ const create = document.querySelector('.create');
 import { serviceList } from '../../service/serviceList.js'
 import { serviceCreate } from '../../service/serviceCreate.js';
 
-
 list.addEventListener('click', () => {
 
     serviceList();
@@ -14,6 +13,9 @@ create.addEventListener('click', () => {
     serviceCreate();
 });
 
-
 window.onload = serviceList()
 
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    showToast('Oppps!', 'error');
+});

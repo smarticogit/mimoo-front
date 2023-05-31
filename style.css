@@ -68,6 +68,7 @@ main form button {
     height: 25px;
     text-align: center;
     color: var(--cor-five);
+    cursor: pointer;
 }
 
 main form button:active {

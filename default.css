@@ -62,7 +62,7 @@ body .toast {
     position: absolute;
     color: #fff;
     top: 30px;
-    width: 30%;
+    width: 400px;
     height: 40px;
     padding: 10px;
     border-radius: 10px;
@@ -71,6 +71,7 @@ body .toast {
     z-index: 1;
     opacity: 0;
     transition: opacity 0.5s ease;
+    font-size: 15px;
 }
 
 .toast.show {
@@ -78,7 +79,16 @@ body .toast {
 }
 
 a:hover {
+    cursor: pointer;
     text-decoration: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.wait-cursor {
+    cursor: wait;
 }
 
 .box-loading {

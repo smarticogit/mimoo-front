@@ -55,6 +55,11 @@ const clear = () => {
     password.value = "";
 }
 
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    showToast('Oppps!', 'error');
+});
+
 
 
 
