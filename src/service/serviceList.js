@@ -1,11 +1,15 @@
+import { loading } from "./loading.js";
+
 const box = document.querySelector('.box');
 
 export const serviceList = async () => {
     try {
         box.innerHTML = '';
 
+        loading('on');
         const response = await fetch("https://qfdzv16do0.execute-api.us-east-1.amazonaws.com/tools");
         const data = await response.json();
+        loading('off');
 
         box.classList.add('flex-start-start');
         box.classList.remove('flex-column-center');
@@ -17,6 +21,7 @@ export const serviceList = async () => {
 
             const card = document.createElement('div');
             card.classList.add('card');
+            card.setAttribute('id', tool.id)
 
             const cardTitle = document.createElement('p');
             cardTitle.classList.add('card-title');

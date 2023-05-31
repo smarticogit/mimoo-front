@@ -6,14 +6,12 @@ The application is a simple repository for managing tools with their respective 
 
 This project was built using the serverless framework which, through the serverless.yml file, was configured to direct routes to specific functions and already automatically provision a structure in AWS such as the AWS DynamoDB Database, AWS Lambda Functions, AWS API Gateway for managing routes and AWS Cognito for User Authentication.
 
-
-
 ## Technologies used
 
 The application was built using the following stacks:
 NodeJs, AWS Cognito, AWS Api Gateway, AWS Lambda, AWS DynamoDB, Swagger for documentation and Serverless Framework.
 
-## Links 
+## Links
 
 [-> Backend Repository](https://github.com/smarticogit/mimoo){:target="_blank" rel="noopener"}
 

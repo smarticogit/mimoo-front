@@ -1,6 +1,7 @@
 const form = document.querySelector('form');
 let email = document.querySelector('.email');
 let password = document.querySelector('.password');
+import { loading } from '../../service/loading.js';
 import showToast from '../../service/toast.js';
 const isLocal = window.location.hostname === '127.0.0.1';
 
@@ -16,6 +17,8 @@ form.addEventListener('submit', async (event) => {
         return showToast('Empty Fields', 'error');
     }
 
+    loading('on');
+
     try {
         const response = await fetch('https://qfdzv16do0.execute-api.us-east-1.amazonaws.com/register', {
             method: 'POST',
@@ -25,6 +28,8 @@ form.addEventListener('submit', async (event) => {
             body: JSON.stringify(loginData)
         });
 
+        loading('off')
+        clear();
         if (response.status !== 200) {
             return showToast('check login and password', 'error');
         }
@@ -40,4 +45,9 @@ form.addEventListener('submit', async (event) => {
         showToast('Error server', 'error');
     }
 });
+
+const clear = () => {
+    email.value = "";
+    password.value = "";
+}
 

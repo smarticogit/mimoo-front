@@ -58,7 +58,6 @@
     align-items: flex-start;
 }
 
-
 body .toast {
     position: absolute;
     color: #fff;
@@ -76,4 +75,21 @@ body .toast {
 
 .toast.show {
     opacity: 1;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.box-loading {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 20px;
+    background-color: var(--cor-three);
+    color: rgb(255, 255, 255);
+    z-index: 3;
 }

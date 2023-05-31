@@ -1,16 +1,24 @@
-const loadingElement = document.querySelector(".box-loading");
+const boxLoading = document.querySelector('.box-loading');
+const divloading = document.querySelector('.loading');
+
+export const loading = (status) => {
+
+    if (status === 'on') {
+        boxLoading.style.display = "flex";
+        runLoading();
+    } else {
+        boxLoading.style.display = "none";
+    }
+}
+
 let dots = "";
 
-
-module.exports.loading = () => {
-    loadingElement.textContent = `Loading${dots}`;
+function runLoading() {
+    divloading.textContent = `Loading${dots}`;
     dots += ".";
     if (dots.length > 5) {
         dots = "";
     }
 }
 
-// loadingElement.style.display = "flex";
-// loadingElement.style.display = "none";
-
-setInterval(updateLoadingText, 400);
+setInterval(runLoading, 400);

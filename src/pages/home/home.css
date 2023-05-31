@@ -1,6 +1,6 @@
 body {
     position: relative;
-    background-image: linear-gradient(to top right, rgba(22, 216, 180, 0.315), var(--cor-one));
+    background-image: linear-gradient(to top right, rgba(22, 216, 180, 0.552), var(--cor-one));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,7 +45,8 @@ main menu {
 main menu a {
     margin-top: 20px;
     color: var(--cor-five);
-
+    text-decoration: none;
+    cursor: pointer;
 }
 
 main .content {
@@ -90,6 +91,7 @@ main .box {
 .card-link {
     text-decoration: none;
     color: var(--cor-three);
+    cursor: pointer;
 }
 
 .box-tags {
@@ -112,18 +114,3 @@ main .box {
 .hidden {
     display: none;
 }
-
-.box-loading {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 200px;
-    height: 50px;
-    background-color: rgba(92, 19, 182, 0.38);
-    color: rgb(255, 255, 255);
-    z-index: 1;
-    border-radius: 10px;
-    color: rgb(240, 244, 242);
-}
-

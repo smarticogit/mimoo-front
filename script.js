@@ -1,11 +1,13 @@
 const form = document.querySelector('form');
 let email = document.querySelector('.email');
 let password = document.querySelector('.password');
+import { loading } from './src/service/loading.js';
 import showToast from './src/service/toast.js';
 const isLocal = window.location.hostname === '127.0.0.1';
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
+
 
     const loginData = {
         email: email.value,
@@ -16,6 +18,8 @@ form.addEventListener('submit', async (event) => {
         return showToast('Empty Fields', 'error');
     }
 
+    loading('on');
+
     try {
         const response = await fetch('https://qfdzv16do0.execute-api.us-east-1.amazonaws.com/login', {
             method: 'POST',
@@ -24,6 +28,9 @@ form.addEventListener('submit', async (event) => {
             },
             body: JSON.stringify(loginData)
         });
+
+        loading('off');
+        clear();
 
         if (response.status !== 200) {
             return showToast('check login and password', 'error');
@@ -34,18 +41,19 @@ form.addEventListener('submit', async (event) => {
 
         showToast('Login Successfull'), 'success';
 
-        email.value = "";
-        password.value = "";
-
         setTimeout(() => {
             window.location.href = isLocal ? "./src/pages/home/home.html" : "https://smarticogit.github.io/mimoo-front/src/pages/home/home.html"
         }, 1500);
 
     } catch (error) {
-        console.log(error.message);
-        showToast('Error server'), 'error';
+        showToast('Error server', 'error');
     }
 });
+
+const clear = () => {
+    email.value = "";
+    password.value = "";
+}
 
 
 
