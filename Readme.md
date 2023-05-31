@@ -13,13 +13,13 @@ NodeJs, AWS Cognito, AWS Api Gateway, AWS Lambda, AWS DynamoDB, Swagger for docu
 
 ## Links
 
-[-> Backend Repository](https://github.com/smarticogit/mimoo){:target="_blank" rel="noopener"}
+[-> Backend Repository](https://github.com/smarticogit/mimoo)
 
-[-> Front End Repository](https://github.com/smarticogit/mimoo-front){:target="_blank"}
+[-> Front End Repository](https://github.com/smarticogit/mimoo-front)
 
-[-> App Mimoo Desktop](https://smarticogit.github.io/mimoo-front/){:target="_blank"}
+[-> App Mimoo Desktop](https://smarticogit.github.io/mimoo-front/)
 
-[-> Documentation](https://qfdzv16do0.execute-api.us-east-1.amazonaws.com/dev/swagger){:target="_blank"}
+[-> Documentation](https://qfdzv16do0.execute-api.us-east-1.amazonaws.com/dev/swagger)
 
 ### Usage
 
