@@ -103,3 +103,69 @@ button:hover {
     color: rgb(255, 255, 255);
     z-index: 3;
 }
+
+main form {
+    gap: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--cor-one);
+    border-radius: 10px;
+    width: 80%;
+    height: 70%;
+}
+
+img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+main form input {
+    font-size: 15px;
+    width: 90%;
+    height: 50px;
+    padding: 10px 25px;
+    border: 0;
+    border-radius: 10px;
+    border: 1px solid #C0CCDC;
+    filter: drop-shadow(0px 20px 100px rgba(0, 0, 0, 0.073208));
+    border-radius: 15px;
+}
+
+main form input:focus {
+    font-size: 15px;
+    color: var(--cor-five);
+    outline: 2px solid var(--cor-five);
+    color: #474747;
+}
+
+
+main form p {
+    font-size: 30px;
+    color: var(--cor-five);
+}
+
+main a {
+    all: unset;
+    color: var(--cor-five);
+}
+
+main form button {
+    all: unset;
+    background-color: var(--cor-one);
+    border-radius: 8px;
+    width: 120px;
+    height: 25px;
+    text-align: center;
+    color: var(--cor-one);
+    background: #512E7A;
+    box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.104922);
+    border-radius: 15px;
+    width: 90%;
+    height: 50px;
+    cursor: pointer;
+}
+
+main form button:active {
+    color: var(--cor-four);
+    outline: 2px solid var(--cor-five);
+}
