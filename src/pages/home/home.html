@@ -25,19 +25,22 @@
     <div class="toast">
         <div class="message"></div>
     </div>
-    <main class="flex-column-start">
-        <h2>Home Page</h2>
-        <div class="page flex-center-start">
-            <menu class="flex-column">
-                <img src="../../assets//icon-menu.png" class="icon-menu" alt="icon-menu">
-                <a class="list" title="List Tools">List</a>
-                <a class="create" title="Create Tool">Create</a>
-            </menu>
-            <div class="content">
-                <div class="box flex-column-start-start"></div>
-            </div>
+    <menu>
+        <img class="icon-menu-logo icon-menu" src="../../assets/icon-menu-logo.svg" alt="icon-menu-logo">
+
+        <div class="box-icon-closed list">
+            <img class="icon-menu-tools icon-menu" src="../../assets/icon-menu-tools.svg" alt="icon-menu-tools">
+            <h2 class="menu-h2 hidden">Your tools</h2>
         </div>
-    </main>
+
+        <div class="box-icon-closed create">
+            <img class="icon-menu-create icon-menu" src="../../assets/icon-menu-create.svg" alt="icon-menu-create">
+            <h2 class="menu-h2 hidden">Create tool</h2>
+        </div>
+    </menu>
+    <div class="content">
+        <div class="box flex-column-start-start"></div>
+    </div>
 </body>
 
 </html>

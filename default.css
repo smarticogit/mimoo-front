@@ -78,7 +78,7 @@ body .toast {
     opacity: 1;
 }
 
-a:hover {
+.menu-h2:hover {
     cursor: pointer;
     text-decoration: none;
 }
@@ -114,11 +114,6 @@ main form {
     height: 70%;
 }
 
-img {
-    width: 150px;
-    margin-bottom: 20px;
-}
-
 main form input {
     font-size: 15px;
     width: 90%;
@@ -147,6 +142,7 @@ main form p {
 main a {
     all: unset;
     color: var(--cor-five);
+    cursor: pointer;
 }
 
 main form button {
@@ -168,4 +164,10 @@ main form button {
 main form button:active {
     color: var(--cor-four);
     outline: 2px solid var(--cor-five);
+}
+
+.icon-menu {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
