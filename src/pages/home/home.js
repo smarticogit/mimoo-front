@@ -1,13 +1,13 @@
 const list = document.querySelector('.list');
 const create = document.querySelector('.create');
-const iconMenuLogo = document.querySelector('.icon-menu-logo');
+const iconOpenMenu = document.querySelector('.icon-open-menu');
 const openClosed = document.querySelectorAll('.box-icon-closed')
 const menuH2 = document.querySelectorAll('h2');
 
 import { serviceList } from '../../service/serviceList.js'
 import { serviceCreate } from '../../service/serviceCreate.js';
 
-iconMenuLogo.addEventListener('click', () => {
+iconOpenMenu.addEventListener('click', () => {
 
         menuH2.forEach(elemento => {
             elemento.classList.toggle('hidden');
@@ -15,6 +15,7 @@ iconMenuLogo.addEventListener('click', () => {
 
         openClosed.forEach(elemento => {
             elemento.classList.toggle('box-icon-open');
+            elemento.classList.toggle('hidden');
         });
 });
 
@@ -30,7 +31,7 @@ create.addEventListener('click', () => {
 
 window.onload = serviceList()
 
-document.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
-    showToast('Oppps!', 'error');
-});
+// document.addEventListener('contextmenu', function (e) {
+//     e.preventDefault();
+//     showToast('Oppps!', 'error');
+// });

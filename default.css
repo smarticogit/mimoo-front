@@ -11,7 +11,7 @@
     --cor-three: rgb(125, 93, 192);
     --cor-four: rgb(22, 216, 179);
     --cor-five: rgb(81, 46, 122);
-    --success: rgb(22, 216, 179);
+    --success: rgb(182, 223, 216);
     --error: rgb(81, 46, 122);
 }
 
@@ -76,6 +76,10 @@ body .toast {
 
 .toast.show {
     opacity: 1;
+}
+
+.logo {
+    margin-bottom: 20px;
 }
 
 .menu-h2:hover {
